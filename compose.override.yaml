@@ -1,0 +1,10 @@
+# Override: add a 4GB memory limit to the official OpenBot service,
+# and give the data volume the literal name "openbot-data".
+# Keeps the official compose.yaml untouched. Merged automatically by `docker compose`.
+services:
+  openbot:
+    mem_limit: 4g
+volumes:
+  openbot-data:
+    name: openbot-data
+    external: true
